@@ -1,0 +1,14 @@
+<p>
+  Sign In
+</p>
+
+<form class="" action="/session" method="post">
+  <input type="hidden" name="authenticity_token" value="<%= form_authenticity_token %>">
+
+  <label for="Username">Username</label>
+  <input type="text" name="user[username]" id="Username" value="<%= @user.username %>">
+  <label for="Password">Password</label>
+  <input type="text" name="user[password]" id="Password" value="<%= @user.password %>">
+
+  <input type="submit" name="name" value="Sign In">
+</form>

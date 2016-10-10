@@ -96,4 +96,32 @@ RSpec.configure do |config|
   # as the one that triggered the failure.
   Kernel.srand config.seed
 =end
+
+end
+
+def sign_up(username)
+  visit new_user_path
+  fill_in "Username", with: username
+  fill_in "Password", with: "chewie"
+  click_button "Sign Up"
+end
+
+def sign_in(username)
+  visit new_session_path
+  fill_in "Username", with: username
+  fill_in "Password", with: "chewie"
+  click_button "Sign In"
+end
+
+def create_goal_and_dreams(body)
+  visit new_goal_path
+  fill_in "Body", with: body
+  choose("Public")
+  select("No", :from => "Completed")
+  click_button "Create Goal"
+end
+
+def edit_goal_and_dreams(body)
+  fill_in "Body", with: body
+  click_button "Edit Goal"
 end

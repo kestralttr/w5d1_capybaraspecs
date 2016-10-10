@@ -35,13 +35,14 @@ group :development, :test do
   gem 'byebug'
   gem 'rspec-rails'
   gem 'factory_girl_rails'
+  gem 'bcrypt'
 end
 group :test do
   gem 'faker'
   gem 'capybara'
   gem 'guard-rspec'
   gem 'launchy'
-
+  gem 'shoulda-matchers', '~> 3.1'
 end
 group :development do
   # Access an IRB console on exception pages or by using <%= console %> in views
